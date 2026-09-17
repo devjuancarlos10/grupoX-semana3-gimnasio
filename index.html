@@ -121,6 +121,51 @@
       </div>
     </section>
 
+    <!-- PASO 5: FORMULARIO ACCESIBLE CON VALIDACIÓN UI -->
+    <section id="contacto" class="py-16 bg-white border-top">
+      <div class="container max-w-xl mx-auto">
+        <h2 class="h3 fw-bold text-center mb-2">Comienza Tu Cambio Hoy</h2>
+        <p class="text-center text-muted mb-6">Regístrate para programar tu clase de prueba gratuita.</p>
+
+        <form novalidate>
+          <!-- Campo con estado de éxito (is-valid) -->
+          <div class="mb-4">
+            <label for="nombreCompleto" class="form-label fw-semibold text-slate-800">Nombre y Apellidos</label>
+            <input type="text" class="form-control is-valid rounded-lg" id="nombreCompleto" value="Juan Carlos" required>
+            <div class="valid-feedback">Correcto: Formato de nombre válido.</div>
+          </div>
+
+          <!-- Campo con estado de error (is-invalid y aria-describedby) -->
+          <div class="mb-4">
+            <label for="correoElectronico" class="form-label fw-semibold text-slate-800">Correo Electrónico</label>
+            <input type="email" class="form-control is-invalid rounded-lg" id="correoElectronico" aria-describedby="correoError" placeholder="tu_correo@ejemplo.com" required>
+            <div id="correoError" class="invalid-feedback">Por favor ingresa un correo electrónico válido.</div>
+          </div>
+
+          <!-- Selección accesible de plan -->
+          <div class="mb-6">
+            <label for="planSeleccionado" class="form-label fw-semibold text-slate-800">Plan a Contratar</label>
+            <select class="form-select rounded-lg" id="planSeleccionado">
+              <option value="1">Plan Básico - S/ 79</option>
+              <option value="2" selected>Plan Black Pro - S/ 129</option>
+              <option value="3">Plan VIP Personal - S/ 199</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-warning w-100 py-3 rounded-lg fw-bold shadow-md hover:brightness-95 transition">
+            Confirmar Reserva
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-6 border-top border-zinc-800 text-center text-sm text-secondary">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 PowerFit Club. Proyecto IS093A - UNCP.</p>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
