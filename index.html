@@ -17,6 +17,45 @@
 </head>
 <body class="bg-gray-50 text-slate-800">
 
+    <!-- PASO 2: NAVBAR HÍBRIDO -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg py-3 backdrop-blur bg-opacity-95">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-uppercase tracking-wider text-warning" href="#">PowerFit</a>
+      
+      <!-- Botón Hamburguesa (Móviles) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPowerfit" aria-controls="navPowerfit" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navPowerfit">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#planes">Planes</a>
+          </li>
+          <!-- Menú Desplegable con Badge -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Servicios <span class="badge bg-danger ms-1 text-xs">Nuevo</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Musculación y Fuerza</a></li>
+              <li><a class="dropdown-item" href="#">Cardio & Spinning</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Nutrición Deportiva</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+        <a href="#contacto" class="btn btn-warning fw-semibold px-4 rounded-full">Prueba Gratis</a>
+      </div>
+    </div>
+  </nav>
+
 <!-- PASO 4: GRID DE TARJETAS (12 Columnas + Transiciones) -->
   <main>
     <section id="planes" class="py-16">
